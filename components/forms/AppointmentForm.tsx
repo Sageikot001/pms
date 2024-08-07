@@ -10,7 +10,7 @@ import SubmitButton from "../SubmitButton";
 import { useState } from "react";
 import { getAppointmentSchema } from "@/lib/validation";
 import { useRouter } from "next/navigation";
-import { createUser } from "@/lib/actions/patient.action";
+// import { createUser } from "@/lib/actions/patient.action";
 import { FormFieldType } from "./PatientForm";
 import React from "react";
 import { Doctors } from "@/constants";
@@ -27,16 +27,17 @@ const AppointmentForm = ({
   patientId,
   type,
   appointment,
-  setOpen,
+  // setOpen,
 }: {
   userId: string;
   patientId: string;
   type: "create" | "cancel" | "schedule";
   appointment?: Appointment;
-  setOpen: (open: boolean) => void;
+  // setOpen: (open: boolean) => void;
 }) => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const AppointmentFormValidation = getAppointmentSchema(type);
 
