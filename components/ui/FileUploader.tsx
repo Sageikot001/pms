@@ -13,7 +13,7 @@ type FileUploaderProps = {
 const FileUploader = ({ files, onChange }: FileUploaderProps) => {
   const onDrop = useCallback((acceptedFiles: File[]) => {
     onChange(acceptedFiles);
-  }, []);
+  }, [onChange]);
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
 
   return (
@@ -49,7 +49,7 @@ const FileUploader = ({ files, onChange }: FileUploaderProps) => {
       {isDragActive ? (
         <p>Drop the files here ...</p>
       ) : (
-        <p>Drag 'n' drop some files here, or click to select files</p>
+        <p>Drag &apos;n&apos; drop some files here, or click to select files</p>
       )}
     </div>
   );
