@@ -22,13 +22,13 @@ const Success = async ({ params: { userId }, searchParams }: SearchParamProps) =
     <div className='flex h-screen max-h-screen px-[5%]'>
         <div className='success-img'>
             <Link href="/">
-            <Image 
-            src="/assets/icons/logo-full.svg"
-            alt='logo'
-            width={1000}
-            height={1000}
-            className='h-10 w-fit'
-            />
+            <Image
+          src="/assets/icons/logo33.svg"
+          height={1000}
+          width={1000}
+          alt="patient"
+          className="mb-6 h-32 w-fit"
+          />
             </Link>
 
             <section className='flex flex-col items-center'>
